@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Frank &amp; Lizzie Show — Sponsorship</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --teal: #056C7B;
+      --cyan: #00C2CB;
+      --black: #000000;
+      --gray: #737373;
+      --light-bg: #f9fafb;
+      --card-border: #d1e8ec;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--teal);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      padding: 5rem 0;
+    }
+
+    .hero-image {
+      flex: 0 0 38%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-content .tagline {
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--black);
+      margin-bottom: 2rem;
+      line-height: 1.3;
+    }
+
+    .hero-content .subtitle {
+      font-size: 1.1rem;
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-content .contact {
+      font-size: 1.1rem;
+      color: var(--teal);
+    }
+
+    .hero-content .contact a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    .hero-content .contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Section headings ── */
+    section {
+      padding: 5rem 0;
+    }
+
+    section.alt-bg {
+      background: var(--light-bg);
+    }
+
+    .section-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--black);
+      margin-bottom: 3rem;
+    }
+
+    /* ── What We Do ── */
+    .what-we-do-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .what-we-do-card .icon {
+      width: 48px;
+      height: 48px;
+      background: var(--cyan);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .what-we-do-card .icon svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--white);
+    }
+
+    .what-we-do-card h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 0.75rem;
+    }
+
+    .what-we-do-card p {
+      font-size: 1.05rem;
+      color: var(--teal);
+    }
+
+    /* ── Who We Reach ── */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .stats-grid-bottom {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .stat-card {
+      text-align: center;
+    }
+
+    .stat-card .number {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--teal);
+      line-height: 1.1;
+    }
+
+    .stat-card .label {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-top: 0.5rem;
+    }
+
+    .stat-card .detail {
+      font-size: 1rem;
+      color: var(--teal);
+      margin-top: 0.25rem;
+    }
+
+    .audience-note {
+      margin-top: 3rem;
+      font-size: 1.05rem;
+      color: var(--teal);
+    }
+
+    .audience-note strong {
+      font-weight: 700;
+    }
+
+    /* ── How Sponsorship Works ── */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem 4rem;
+      margin-top: 3rem;
+    }
+
+    .process-step .step-number {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+    }
+
+    .process-step .step-line {
+      height: 2px;
+      background: var(--cyan);
+      margin-bottom: 1rem;
+    }
+
+    .process-step h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 0.75rem;
+    }
+
+    .process-step p {
+      font-size: 1.05rem;
+      color: var(--teal);
+    }
+
+    /* ── Pricing Table ── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .pricing-card {
+      border: 2px solid var(--card-border);
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      position: relative;
+      background: var(--white);
+    }
+
+    .pricing-card.featured {
+      border-color: var(--cyan);
+      box-shadow: 0 4px 24px rgba(0, 194, 203, 0.12);
+    }
+
+    .pricing-card .tier-badge {
+      width: 36px;
+      height: 36px;
+      background: var(--cyan);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+
+    .pricing-card h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 0.25rem;
+    }
+
+    .pricing-card .price {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--cyan);
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-card .best-for {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--teal);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-card .includes-note {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 1rem;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .pricing-card ul li {
+      font-size: 1rem;
+      color: var(--teal);
+      padding: 0.4rem 0;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+
+    .pricing-card ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+      font-weight: 700;
+    }
+
+    /* ── Social Promo Reels ── */
+    .promo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .promo-card {
+      border: 2px solid var(--card-border);
+      border-radius: 12px;
+      padding: 2rem 1.75rem;
+      background: var(--white);
+    }
+
+    .promo-card h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 1rem;
+    }
+
+    .promo-card p {
+      font-size: 1.05rem;
+      color: var(--teal);
+    }
+
+    /* ── Add-ons ── */
+    .addons-list {
+      list-style: none;
+      margin-top: 2rem;
+      max-width: 800px;
+    }
+
+    .addons-list li {
+      font-size: 1.05rem;
+      color: var(--teal);
+      padding: 0.65rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .addons-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    /* ── Simple Rules ── */
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .rule-card {
+      border: 2px solid var(--card-border);
+      border-radius: 12px;
+      padding: 2rem 1.75rem;
+      background: var(--white);
+    }
+
+    .rule-card h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 0.75rem;
+    }
+
+    .rule-card p {
+      font-size: 1.05rem;
+      color: var(--teal);
+    }
+
+    /* ── What We Need ── */
+    .need-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 4rem;
+      margin-top: 3rem;
+    }
+
+    .need-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+
+    .need-item .check-circle {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      background: var(--cyan);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .need-item .check-circle svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--white);
+    }
+
+    .need-item h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 0.25rem;
+    }
+
+    .need-item p {
+      font-size: 1rem;
+      color: var(--teal);
+    }
+
+    /* ── CTA / Closing ── */
+    .closing {
+      padding: 0;
+    }
+
+    .closing-banner {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .closing-content {
+      padding: 4rem 0 5rem;
+    }
+
+    .closing-content h2 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 1.5rem;
+    }
+
+    .closing-content p {
+      font-size: 1.1rem;
+      color: var(--teal);
+      margin-bottom: 0.35rem;
+    }
+
+    .closing-content a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    .closing-content a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+        padding: 3rem 0;
+      }
+
+      .hero-image {
+        flex: none;
+        width: 70%;
+        max-width: 400px;
+      }
+
+      .hero-image img {
+        clip-path: none;
+        border-radius: 12px;
+      }
+
+      .hero-content h1 { font-size: 2.2rem; }
+      .hero-content .tagline { font-size: 1.6rem; }
+
+      .section-title { font-size: 2rem; }
+      .section-subtitle { font-size: 1.3rem; }
+
+      .what-we-do-grid,
+      .pricing-grid,
+      .promo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats-grid-bottom {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+      }
+
+      .process-grid,
+      .rules-grid,
+      .need-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-card .number { font-size: 2.5rem; }
+
+      .closing-banner { height: 200px; }
+    }
+
+    @media (max-width: 500px) {
+      .container { padding: 0 1.25rem; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .stats-grid-bottom { grid-template-columns: 1fr; }
+      .hero-content h1 { font-size: 1.75rem; }
+      .hero-content .tagline { font-size: 1.3rem; }
+      .pricing-card .price { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ Hero ═══ -->
+  <section class="hero">
+    <div class="container" style="display:flex;align-items:center;gap:3rem;flex-wrap:wrap;">
+      <div class="hero-image">
+        <img src="images/hosts-v2.avif" alt="Frank and Lizzie, hosts of The Frank and Lizzie Show" width="500" height="500">
+      </div>
+      <div class="hero-content">
+        <h1>The Frank &amp; Lizzie Show</h1>
+        <p class="tagline">Wound Care Made Simple. Education Made Fun.</p>
+        <p class="subtitle">Sponsorship overview: YouTube + Instagram + Facebook + LinkedIn + TikTok</p>
+        <p class="contact">Contact: <a href="mailto:info@frankandlizzie.show">info@frankandlizzie.show</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ What We Do ═══ -->
+  <section class="alt-bg">
+    <div class="container">
+      <h2 class="section-title">What we do</h2>
+      <div class="what-we-do-grid">
+        <div class="what-we-do-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm6 4v8l6-4-6-4z"/></svg>
+          </div>
+          <h3>Educational Videos</h3>
+          <p>We turn complex wound-care topics into easy, helpful videos.</p>
+        </div>
+        <div class="what-we-do-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+          </div>
+          <h3>Multi-Platform</h3>
+          <p>Episodes live on YouTube; highlights go to Instagram, Facebook, and LinkedIn.</p>
+        </div>
+        <div class="what-we-do-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Natural Integration</h3>
+          <p>Sponsor messages appear inside useful education, not as random ads.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Who We Reach ═══ -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Who we reach</h2>
+      <div class="stats-grid-bottom" style="max-width:360px;margin-bottom:2.5rem;">
+        <div class="stat-card">
+          <div class="number">24.5K</div>
+          <div class="label">Total Content Views</div>
+          <div class="detail">Monthly (all platforms)</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">5,572</div>
+          <div class="label">Total Followers</div>
+          <div class="detail">Across all platforms</div>
+        </div>
+      </div>
+      <div class="stats-grid" style="grid-template-columns:repeat(5,1fr);">
+        <div class="stat-card">
+          <div class="number">7.5K</div>
+          <div class="label">YouTube</div>
+          <div class="detail">Views / 1,179 subscribers</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">8.5K</div>
+          <div class="label">Instagram</div>
+          <div class="detail">Views / 725 followers</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">2.8K</div>
+          <div class="label">Facebook</div>
+          <div class="detail">Views / 294 followers</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">3.1K</div>
+          <div class="label">LinkedIn</div>
+          <div class="detail">Followers / 8.7K impressions</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">5.7K</div>
+          <div class="label">TikTok</div>
+          <div class="detail">Views / 336 followers</div>
+        </div>
+      </div>
+      <p class="audience-note"><strong>Audience:</strong> WOC nurses, PT/OT, NP/PA/MD, clinical educators, post-acute leaders (US-first, global)</p>
+    </div>
+  </section>
+
+  <!-- ═══ How Sponsorship Works ═══ -->
+  <section class="alt-bg">
+    <div class="container">
+      <h2 class="section-title">How sponsorship works</h2>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <div class="step-line"></div>
+          <h3>Pre-Recording Collaborative Planning Session</h3>
+          <p>We'll collaborate to define three main discussion points and select your episode's featured guest.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <div class="step-line"></div>
+          <h3>We Produce</h3>
+          <p>We produce and edit a clean integration that fits the episode.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <div class="step-line"></div>
+          <h3>We Post</h3>
+          <p>We post on YouTube, Instagram, Facebook, and LinkedIn.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <div class="step-line"></div>
+          <h3>We Keep It Live</h3>
+          <p>We keep it live: YouTube 12 months; social 90 days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Sponsorship Plans ═══ -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Sponsorship</h2>
+      <div class="pricing-grid">
+
+        <!-- Essential -->
+        <div class="pricing-card">
+          <div class="tier-badge">1</div>
+          <h3>Essential</h3>
+          <div class="price">$4,500</div>
+          <div class="best-for">Basic</div>
+          <ul>
+            <li>Your brand shown on screen during the video (small banner at the bottom with logo/link)</li>
+            <li>One brief mention of your brand in the video</li>
+            <li>Your link at the top of the YouTube description</li>
+            <li>Pinned YouTube comment with your link/CTA</li>
+            <li>1 Story on Instagram or Facebook</li>
+            <li>Stays live: YouTube and social 12 months</li>
+          </ul>
+        </div>
+
+        <!-- Spotlight -->
+        <div class="pricing-card featured">
+          <div class="tier-badge">2</div>
+          <h3>Spotlight</h3>
+          <div class="price">$6,500</div>
+          <div class="best-for">Most Popular</div>
+          <p class="includes-note">Everything in Essential, plus:</p>
+          <ul>
+            <li>Clickable end-screen on the YouTube video</li>
+            <li>1 short clip posted as a YouTube Short + IG/FB Reels</li>
+            <li>1 LinkedIn video post (our page)</li>
+            <li>1 short text post with your link (YouTube Community or LinkedIn)</li>
+            <li>3 Stories during publish week</li>
+            <li>Stays live: YouTube and social 12 months</li>
+          </ul>
+        </div>
+
+        <!-- Signature -->
+        <div class="pricing-card">
+          <div class="tier-badge">3</div>
+          <h3>Signature</h3>
+          <div class="price">$7,500</div>
+          <div class="best-for">Category Exclusive</div>
+          <p class="includes-note">Everything in Spotlight, plus:</p>
+          <ul>
+            <li>90-150s sponsored segment inside the episode (demo/education)</li>
+            <li>2nd short clip (another Short/Reel)</li>
+            <li>6 Stories during publish week</li>
+            <li>Host LinkedIn post (you may promote with your ad budget if you wish)</li>
+            <li>Category exclusivity: only brand in your category this episode + 14 days on each side</li>
+            <li>Stays live: YouTube and social 12 months</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Social Promo Reels ═══ -->
+  <section class="alt-bg">
+    <div class="container">
+      <h2 class="section-title">Social promo reels</h2>
+      <div class="promo-grid">
+        <div class="promo-card">
+          <h3>Post-Only &mdash; $750</h3>
+          <p>You send a finished reel; we post once per platform (no edits)</p>
+        </div>
+        <div class="promo-card">
+          <h3>Promo Reel &mdash; $1,000</h3>
+          <p>We lightly edit a 60-90s reel, add an on-screen CTA (lower-third), and post everywhere; 1 light revision</p>
+        </div>
+        <div class="promo-card">
+          <h3>Promo + Story Boost &mdash; $1,750</h3>
+          <p>Promo Reel plus 3 Stories during publish week</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Add-ons ═══ -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Add-ons</h2>
+      <p class="section-subtitle">Optional</p>
+      <ul class="addons-list">
+        <li>Run ads from our post (license 30-90 days): $500-$1,500 (you fund media)</li>
+        <li>Extra short videos (additional clips curated by clients with 90 days license): $300-$600 each</li>
+        <li>Extended YouTube listing (+12 months): $750</li>
+        <li>Extra Stories (+3 frames): $150-$300</li>
+        <li>On-site filming (conference/booth): $2,000/day + travel</li>
+        <li>Rush production (&lt;5 business days): +20%</li>
+        <li>Reporting (we create UTMs + 30-day recap): $400</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ Simple Rules ═══ -->
+  <section class="alt-bg">
+    <div class="container">
+      <h2 class="section-title">Simple rules</h2>
+      <div class="rules-grid">
+        <div class="rule-card">
+          <h3>Links</h3>
+          <p>You send the exact link; UTMs optional. We paste it as given.</p>
+        </div>
+        <div class="rule-card">
+          <h3>Placements</h3>
+          <p>Pinned comment + top description + end screen: included with the episode plans as listed.</p>
+        </div>
+        <div class="rule-card">
+          <h3>In-Episode Segment</h3>
+          <p>Included in Signature; can be a $2,500 add-on to Essential/Spotlight when no Signature is booked.</p>
+        </div>
+        <div class="rule-card">
+          <h3>Exclusivity</h3>
+          <p>Signature is category-exclusive for that episode (+14 days).</p>
+        </div>
+        <div class="rule-card">
+          <h3>Payment</h3>
+          <p>50% deposit to hold your slot; 50% at publish (Net-15).</p>
+        </div>
+        <div class="rule-card">
+          <h3>Compliance</h3>
+          <p>We include FTC and platform disclosures (YouTube "Includes paid promotion," Meta "Paid Partnership").</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ What We Need From You ═══ -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">What we need from you</h2>
+      <div class="need-grid">
+        <div class="need-item">
+          <div class="check-circle">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          </div>
+          <div>
+            <h3>Your destination link</h3>
+            <p>(UTM optional)</p>
+          </div>
+        </div>
+        <div class="need-item">
+          <div class="check-circle">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          </div>
+          <div>
+            <h3>Logo and any product shots</h3>
+          </div>
+        </div>
+        <div class="need-item">
+          <div class="check-circle">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          </div>
+          <div>
+            <h3>2-3 key points or a short script</h3>
+          </div>
+        </div>
+        <div class="need-item">
+          <div class="check-circle">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          </div>
+          <div>
+            <h3>Any compliance notes or must-say lines</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Closing ═══ -->
+  <section class="closing">
+    <img class="closing-banner" src="images/hosts-banner.gif" alt="Frank and Lizzie recording a show" width="1600" height="320">
+    <div class="container">
+      <div class="closing-content">
+        <h2>Questions?</h2>
+        <p>We're happy to tailor details to your goals and timing</p>
+        <p>Contact: <a href="mailto:info@frankandlizzieshow.com">info@frankandlizzieshow.com</a></p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

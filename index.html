@@ -197,6 +197,20 @@
       margin-top: 0.25rem;
     }
 
+    .stats-headline {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1000px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .stats-headline .number { font-size: 4.5rem; letter-spacing: -0.02em; }
+
+    .stats-platforms { grid-template-columns: repeat(5, 1fr); }
+
+    .stats-platforms .number { font-size: 2.75rem; }
+
+    .stats-platforms .detail { line-height: 1.6; }
+
     .audience-note {
       margin-top: 3rem;
       font-size: 1.05rem;
@@ -535,12 +549,18 @@
       .stat-card .number { font-size: 2.5rem; }
 
       .closing-banner { height: 200px; }
+
+      .stats-headline { grid-template-columns: 1fr; gap: 2rem; }
+      .stats-headline .number { font-size: 3.5rem; }
+      .stats-platforms { grid-template-columns: repeat(2, 1fr); }
+      .stats-platforms .number { font-size: 2.5rem; }
     }
 
     @media (max-width: 500px) {
       .container { padding: 0 1.25rem; }
       .stats-grid { grid-template-columns: 1fr; }
       .stats-grid-bottom { grid-template-columns: 1fr; }
+      .stats-platforms { grid-template-columns: repeat(2, 1fr); }
       .hero-content h1 { font-size: 1.75rem; }
       .hero-content .tagline { font-size: 1.3rem; }
       .pricing-card .price { font-size: 2.2rem; }
@@ -598,53 +618,53 @@
   <section>
     <div class="container">
       <h2 class="section-title">Who we reach</h2>
-      <p class="section-subtitle">16 months of growth across YouTube, Instagram, Facebook, LinkedIn, and TikTok</p>
+      <p class="section-subtitle">All-time totals across YouTube, Instagram, Facebook, LinkedIn, and TikTok</p>
 
       <!-- Headline totals -->
-      <div class="stats-grid" style="grid-template-columns:repeat(3,1fr);max-width:1000px;margin:0 auto 3.5rem;">
+      <div class="stats-grid stats-headline">
         <div class="stat-card">
-          <div class="number">1M+</div>
+          <div class="number">1.4M+</div>
           <div class="label">Total Content Views</div>
-          <div class="detail">All platforms combined, Mar 2025 to Jul 2026</div>
+          <div class="detail">All platforms, Mar 2025 to Oct 2026</div>
         </div>
         <div class="stat-card">
-          <div class="number">~6,300</div>
+          <div class="number">7,100+</div>
           <div class="label">Total Followers</div>
-          <div class="detail">All platforms, up 99% in 16 months</div>
+          <div class="detail">All platforms, more than doubled</div>
         </div>
         <div class="stat-card">
-          <div class="number">900+ hrs</div>
-          <div class="label">Peak-Month Watch Time</div>
-          <div class="detail">YouTube, climbing every month</div>
+          <div class="number">3,300+</div>
+          <div class="label">Total Watch Hours</div>
+          <div class="detail">YouTube, record 860 in June 2026</div>
         </div>
       </div>
 
       <!-- Per-platform breakdown -->
-      <div class="stats-grid" style="grid-template-columns:repeat(5,1fr);">
+      <div class="stats-grid stats-platforms">
         <div class="stat-card">
-          <div class="number">1,445</div>
+          <div class="number">1,600</div>
           <div class="label">YouTube</div>
-          <div class="detail">Subscribers · 71K+ cumulative views · 2,300+ watch hours</div>
+          <div class="detail">Subscribers<br>134K+ total views<br>Peak 17.1K/month</div>
         </div>
         <div class="stat-card">
-          <div class="number">742</div>
+          <div class="number">926</div>
           <div class="label">Instagram</div>
-          <div class="detail">Followers · 272K+ cumulative views · peak 9.4K/month</div>
+          <div class="detail">Followers<br>322K+ total views<br>Peak 106K/month</div>
         </div>
         <div class="stat-card">
-          <div class="number">315</div>
+          <div class="number">385</div>
           <div class="label">Facebook</div>
-          <div class="detail">Followers · 668K+ cumulative views · 1,962 unique reach/month</div>
+          <div class="detail">Followers<br>708K+ total views<br>Peak 419K/month</div>
         </div>
         <div class="stat-card">
-          <div class="number">3,362</div>
+          <div class="number">3,512</div>
           <div class="label">LinkedIn</div>
-          <div class="detail">Followers · 141K+ impressions · 28K+ healthcare pros reached</div>
+          <div class="detail">Followers<br>193K+ impressions<br>Peak 19.5K/month</div>
         </div>
         <div class="stat-card">
-          <div class="number">460</div>
+          <div class="number">722</div>
           <div class="label">TikTok</div>
-          <div class="detail">Followers · 50K+ cumulative views · 10.9K peak month</div>
+          <div class="detail">Followers<br>106K+ total views<br>Peak 17.3K/month</div>
         </div>
       </div>
 
@@ -658,7 +678,7 @@
         <div class="stat-card">
           <div class="number">56%</div>
           <div class="label">Resource Download Conversion</div>
-          <div class="detail">Form view to download, around 32 downloads per month</div>
+          <div class="detail">Form view to download, with 275+ total downloads</div>
         </div>
       </div>
 
